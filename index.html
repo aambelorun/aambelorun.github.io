@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aminat Ambelorun</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            background-color: #ffffff;
+            color: #333;
+        }
+        header {
+            padding: 28px 40px 10px 40px;
+            background-color: transparent;
+        }
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header-line {
+            margin: 10px 0;
+            width: 100%;
+            border: 0;
+            border-top: 4px solid navy;
+        }
+        .subheader {
+                    font-size: 18px;
+                    color: #666;
+                    margin-top: 5px;
+        }
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        .about-text {
+            max-width: 500px;
+        }
+        .profile-image {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+        section {
+            display: none;
+            padding: 40px;
+        }
+        #home {
+            display: block;
+        }
+        a {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-wrapper">
+            <div>
+                <h1 class="site-title">Aminat Ambelorun</h1>
+                <h2 class="subheader">PhD Student</h2>
+            </div>
+            <nav>
+                <a href="#" onclick="showSection('home')">Home</a>
+                <a href="#" onclick="showSection('research')">Research</a>
+                <a href="Aminat_Ambelorun_CV.pdf" target="_blank">CV</a>
+            </nav>
+        </div>
+        <hr class="header-line">
+    </header>
+
+    <section id="home">
+        <div class="about-container">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>I am a PhD student in the Ice & Climate Group at the Georgia Institute of Technology </p>
+                
+                <p>Beyond research, I enjoy learning about global cultures.</p>
+            </div>
+            <img src="image1.jpg" alt="Aminat Ambelorun" class="profile-image">
+        </div>
+    </section>
+
+    <section id="research">
+        <p>I am a PhD student in the Ice & Climate Group at the Georgia Institute of Technology </p>
+        
+        <p>Beyond research, I enjoy learning about global cultures.</p>
+    </section>
+    
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll("section");
+            sections.forEach(section => section.style.display = "none");
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
+    
